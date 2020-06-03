@@ -1,0 +1,49 @@
+﻿@model IEnumerable<FruitSeller.Models.Stock>
+
+@{
+    ViewBag.Title = "StockList";
+}
+
+<h2>Stock List</h2>
+
+<p>
+    @Html.ActionLink("Add New Stock ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FruitName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QtyType)
+        </th>
+        <th>Edit </th>
+        <th>Delete </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FruitName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QtyType)
+        </td>
+        <td>
+            <h3 class="btn btn-warning">@Html.ActionLink("Edit", "Edit", new { id = item.id }) </h3></td>
+            <td>
+                <h3 class="btn btn-warning">@Html.ActionLink("Delete", "Delete", new { id = item.id })</h3>
+            </td>
+    </tr>
+}
+
+</table>
+
+
+<a href="@Url.Action("Correct","Home")">Back to Dashboard </a>

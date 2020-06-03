@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <script>
+    addEventListener("load", function () {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+    </script>
+    <!--booststrap-->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="~/css/style.css" rel='stylesheet' type='text/css' media="all">
+    <!--//stylesheets-->
+    <link href="//fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Libre+Franklin:400,500" rel="stylesheet">
+
+
+
+</head>
+<body>
+    
+
+    <div class="main-top" id="home">
+        <!-- header -->
+        <div class="headder-top d-md-flex">
+            <div id="logo">
+                <h1>
+                    <a href="@Url.Action("Login","Home")"> Online Fruit vendor </a>
+                </h1>
+            </div>
+            <!-- nav -->
+            <nav class="mx-md-auto">
+
+                <label for="drop" class="toggle">Menu</label>
+                <input type="checkbox" id="drop">
+                <ul class="menu mt-2">
+                    <li class="active">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                   
+                    <li>
+                        @Html.ActionLink("Contact", "Contact", "Home")
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Login","Home")"> Login Admin </a>
+                    </li>
+                                       
+                </ul>
+            </nav>
+
+            <!-- //nav -->
+        </div>
+        <!-- //header -->
+        <!-- banner -->
+        <div class="slider-img ">
+            <div class="container">
+                <div class="slider-info">
+                    <h5>Get Fresh Fruits</h5>
+                    <h4> of Top Quality</h4>
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+
+
+
+
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+
+    <!-- footer -->
+    
+    <!--//footer -->
+    <!-- copy right -->
+    <footer>
+        <div class="bottom-footer text-center py-md-4 py-3">
+            <p>
+                © 2020 Online Vendor . All Rights Reserved | Design by 
+                <a href="#" target="_blank">Online vendor </a>
+            </p>
+        </div>
+    </footer>
+    <!-- copy right -->
+
+
+</body>
+</html>

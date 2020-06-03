@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1 align="center">Wel come to the Admin Portion of the seller store</h1> 
+<hr/>
+<div class="link">
+    <ul>
+        <li> <a href="@Url.Action("EmployeeList","Employee")">Employee </a></li>
+        <br /><hr/>
+        <li> <a href="@Url.Action("StockList","Stock")">Stock </a></li>
+        <br /><hr />
+        <li> <a href="@Url.Action("SaleList","Sale")">Sale </a></li>
+        <br /><hr />
+        <li> <a href="@Url.Action("PurchaseList","Purchase")">Purchase </a></li>
+        <br /><hr />
+
+        <li> <a href="@Url.Action("ContactList","Contact")">Contact </a></li>
+        <br /><hr />
+
+
+    </ul>
+
+</div>
+
+<a href="@Url.Action("Index","Home")">Back to Main Site </a>
